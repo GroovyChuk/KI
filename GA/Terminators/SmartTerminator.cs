@@ -5,13 +5,18 @@ using UnityEngine;
 
 public class SmartTerminator : ITerminator
 {
-	private float chucksWrath = .2f;
+
+	int generationCount = 1;
 
 	public bool JudgementDay(GenerationDB.Generation generation)
 	{
-		if (generation.Fittest.fitnessValue > 90.0)
+		if (generation.Fittest.fitnessValue > 95.0 || generationCount == 20) {
+			generationCount = 1;
 			return true;
-		else
+		}
+		else {
+			generationCount++;
 			return false;
+		}
 	}
 }

@@ -8,6 +8,6 @@ public class SmartFitness : IFitnessFunction
 
 	public float DetermineFitness(CarState state)
 	{
-		return 100 - state.DistanceFromGoal() * 2 - state.AngleToGoal() - (state.NumberOfCollisions() * 20) - Mathf.Abs(state.CurrentVelocity())*10;
+		return 100 - state.DistanceFromGoal() * 4 - state.AngleToGoal() - (state.NumberOfCollisions() * 20) - Mathf.Abs(state.CurrentVelocity())*10;
 	}
 }

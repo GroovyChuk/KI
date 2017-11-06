@@ -28,6 +28,6 @@ public class GeneD : IGene
     }
     public void Execute()
     {
-        controller.ApplySteering(-1);
+        controller.ApplySteering(-4);
     }
 }

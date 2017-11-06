@@ -28,7 +28,7 @@ public class GeneF : IGene
 	}
 	public void Execute()
 	{
-		controller.ApplyMotorTorque(-1);
+		controller.ApplyMotorTorque(2);
 		controller.ApplyBrakes();
 	}
 }
