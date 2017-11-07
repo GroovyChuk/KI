@@ -28,6 +28,6 @@ public class GeneE : IGene
     }
     public void Execute()
     {
-        controller.ApplyBrakes();
+		controller.ApplySteering(1);
     }
 }

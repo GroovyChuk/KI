@@ -28,6 +28,7 @@ public class GeneD : IGene
     }
     public void Execute()
     {
-        controller.ApplySteering(-4);
+        controller.ApplySteering(-1);
+		controller.ApplyMotorTorque(-1);
     }
 }

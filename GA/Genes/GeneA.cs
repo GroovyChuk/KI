@@ -27,6 +27,6 @@ public class GeneA : IGene {
     }
     public void Execute()
     {
-        controller.ApplyMotorTorque(2);
+        controller.ApplyMotorTorque(1);
     }
 }

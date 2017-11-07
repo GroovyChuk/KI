@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneF : IGene
+public class GeneH : IGene
 {
 
 	private CarController controller;
@@ -11,7 +11,7 @@ public class GeneF : IGene
 	{
 		get
 		{
-			return 'F';
+			return 'H';
 		}
 	}
 
@@ -28,6 +28,7 @@ public class GeneF : IGene
 	}
 	public void Execute()
 	{
-		controller.ApplySteering(-1);
+		controller.ApplyMotorTorque(1);
+		controller.ApplyBrakes ();
 	}
 }

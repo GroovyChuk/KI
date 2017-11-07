@@ -28,6 +28,6 @@ public class GeneB : IGene
     }
     public void Execute()
     {
-		controller.ApplyMotorTorque(-2);
+		controller.ApplyMotorTorque(-1);
     }
 }
