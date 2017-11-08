@@ -34,27 +34,22 @@ public class SmartSelector : ISelector
 				weightedProbability = .0f;
 
 			timesAdded = (int) Math.Floor (weightedProbability * potentialIndividuals.Count * 2);
-			//Debug.Log (weightedProbability + " * " + potentialIndividuals.Count + "* 2 = " + timesAdded);
 			for (int j = 0; j < timesAdded; j++) {
 				selectedIndividuals.Add (potentialIndividuals [i]);
-				Debug.Log (potentialIndividuals [i].Fitness);
 			}
 
 		}
-		Debug.Log ("Count: " + selectedIndividuals.Count);
-		Debug.Log ("fill up");
+
 		// Fill up free spots with random individuals to reach two times the size of the original generation 
 		for (int i = selectedIndividuals.Count; i < potentialIndividuals.Count * 2; i++) {
 			int randomIndividual = UnityEngine.Random.Range (0, potentialIndividuals.Count);
-			Debug.Log (potentialIndividuals[randomIndividual].Fitness);
 			selectedIndividuals.Add (potentialIndividuals[randomIndividual]);
 		}
-		Debug.Log ("--------------------------------");
+
 		AssemblyCSharp.MyFunctions.Shuffle (selectedIndividuals);
 
 		for (int i = 0; i < selectedIndividuals.Count; i++) {
 			newGeneration.Add (selectedIndividuals [i].GeneSequence);
-			Debug.Log (selectedIndividuals [i].Fitness);
 		}
 		return newGeneration;
 	}

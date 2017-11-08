@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmartMutator : IMutator
+public class NuclearWastelandMutator : IMutator
 {
 
-	private float mutationRate = .1f;
+	private float mutationRate = .5f;
 	private List<char> geneIDs;
 
 	public void AssignGene(char ID)
