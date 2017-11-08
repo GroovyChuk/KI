@@ -45,7 +45,7 @@ public class AtLeastOnceInitializer : IInitializer
 			shuffledGenes.Add(shuffledGenes[randomIndex]);
 		}
 
-		Debug.Log("GeneCopy Size: " + shuffledGenes.Count);
+		//Debug.Log("GeneCopy Size: " + shuffledGenes.Count);
 
 		//Shuffle genes
 		AssemblyCSharp.MyFunctions.Shuffle (shuffledGenes);
@@ -57,7 +57,7 @@ public class AtLeastOnceInitializer : IInitializer
 		}
 
 		ind.GeneSequence= builder.ToString();
-		Debug.Log (ind.geneSequence);
+		//Debug.Log (ind.geneSequence);
 
 		return ind;
 	}

@@ -10,7 +10,7 @@ public class SmartTerminator : ITerminator
 
 	public bool JudgementDay(GenerationDB.Generation generation)
 	{
-		if (generation.Fittest.fitnessValue > 95.0 || generationCount == 20) {
+		if (generation.Fittest.fitnessValue > 99.0 || generationCount == 30) {
 			generationCount = 1;
 			return true;
 		}

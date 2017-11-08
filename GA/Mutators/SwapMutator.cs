@@ -20,7 +20,7 @@ public class SwapMutator: IMutator
 		if (rand == null)
 			rand = new System.Random();
 
-		Debug.Log ("Before Mutation :" + original);
+		//Debug.Log ("Before Mutation :" + original);
 
 		string mutated = original;
 		System.Text.StringBuilder mutatedBuilder = new System.Text.StringBuilder(mutated);
@@ -32,8 +32,8 @@ public class SwapMutator: IMutator
 			int indexOne = rand.Next (0, original.Length);
 			int indexTwo = rand.Next (0, original.Length);
 
-			Debug.Log ("IndexOne :" + indexOne);
-			Debug.Log ("IndexTwo :" + indexTwo);
+			//Debug.Log ("IndexOne :" + indexOne);
+			//Debug.Log ("IndexTwo :" + indexTwo);
 
 			//Make sure that indexes are not the same
 			while (indexTwo == indexOne) {
@@ -46,7 +46,7 @@ public class SwapMutator: IMutator
 			mutatedBuilder[indexTwo] = temp;
 		}
 
-		Debug.Log ("After Mutation :" + mutatedBuilder.ToString());
+		//Debug.Log ("After Mutation :" + mutatedBuilder.ToString());
 
 		return mutatedBuilder.ToString();
 	}
